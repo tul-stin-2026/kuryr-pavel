@@ -1,4 +1,4 @@
-package cz.tulcz.stin.paveltyl.discount;
+package cz.tul.stin.paveltyl.discount;
 
 // Strategie slevy
 public interface DiscountStrategy {     // Rozhraní pro různé typy slev

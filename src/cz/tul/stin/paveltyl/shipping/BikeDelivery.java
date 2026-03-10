@@ -1,4 +1,4 @@
-package cz.tulcz.stin.paveltyl.shipping;
+package cz.tul.stin.paveltyl.shipping;
 
 // Implementace dopravy na kole
 public class BikeDelivery implements ShippingMethod { // Implementace rozhraní

@@ -1,4 +1,4 @@
-package cz.tulcz.stin.paveltyl.shipping;
+package cz.tul.stin.paveltyl.shipping;
 
 // Rozhraní definující způsob dopravy
 public interface ShippingMethod { // Společný typ pro všechny druhy dopravy

@@ -1,4 +1,4 @@
-package cz.tulcz.stin.paveltyl.discount;
+package cz.tul.stin.paveltyl.discount;
 
 // Procentuální sleva
 public class PercentageDiscount implements DiscountStrategy {

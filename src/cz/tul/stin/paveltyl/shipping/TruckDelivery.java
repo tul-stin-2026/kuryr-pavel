@@ -1,4 +1,4 @@
-package cz.tulcz.stin.paveltyl.shipping;
+package cz.tul.stin.paveltyl.shipping;
 
 // Implementace dopravy kamionem
 public class TruckDelivery implements ShippingMethod { // Třída implementuje rozhraní

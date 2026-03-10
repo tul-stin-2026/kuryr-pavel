@@ -1,4 +1,4 @@
-package cz.tulcz.stin.paveltyl.shipping;
+package cz.tul.stin.paveltyl.shipping;
 
 // Implementace letecké dopravy
 public class AirDelivery implements ShippingMethod { // Implementuje rozhraní

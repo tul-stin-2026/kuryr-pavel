@@ -1,4 +1,4 @@
-package cz.tulcz.stin.paveltyl.discount;
+package cz.tul.stin.paveltyl.discount;
 
 public class NoDiscount implements DiscountStrategy {
 
