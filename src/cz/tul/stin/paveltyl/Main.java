@@ -17,7 +17,7 @@ public class Main {
 
         Delivery d1 = new Delivery(         // Vytvoření zásilky
                 "CZ001",                    // Tracking number
-                10,                         // Váha
+                100,                         // Váha
                 new TruckDelivery(),        // Konkrétní implementace
                 new PercentageDiscount(10)
         );
@@ -38,7 +38,7 @@ public class Main {
 
         Delivery d4 = new Delivery(
                 "CZ999",      // Číslo zásilky
-                10,                        // Váha
+                20,                        // Váha
                 truckMethod,               // Dekorovaná doprava
                 percentageDiscount         // 10% sleva
         );

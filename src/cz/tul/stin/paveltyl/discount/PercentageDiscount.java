@@ -6,6 +6,9 @@ public class PercentageDiscount implements DiscountStrategy {
     private final double percentage;                         // Hodnota slevy
 
     public PercentageDiscount(double percentage) {     // Konstruktor
+        if (percentage < 0 || percentage > 100) {
+            throw new IllegalArgumentException("Discount must be 0–100");
+        }
         this.percentage = percentage;
     }
 
