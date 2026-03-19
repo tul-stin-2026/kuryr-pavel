@@ -2,13 +2,21 @@ package cz.tul.stin.paveltyl.service;
 
 import cz.tul.stin.paveltyl.shipping.AirDelivery;
 import cz.tul.stin.paveltyl.shipping.TruckDelivery;
-import org.junit.jupiter.api.Test;
 
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.*;
 
-// Testuji výběr správného způsobu dopravy pro pracovní den a víkend pomocí fixního času (Clock.fixed).
+// white-box (branch coverage)
+// rozhodování podle dne
+/*
+Pokrýváme obě větve podmínky:
+- pracovní den → Truck
+- víkend → Air
+*/
+// Testuji výběr správného způsobu dopravy pro pracovní den a víkend
+// pomocí fixního času (Clock.fixed).
 class OrderServiceTest {
 
     // Test ověřuje, že ve všední den se použije TruckDelivery.

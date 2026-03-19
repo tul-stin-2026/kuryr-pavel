@@ -3,6 +3,8 @@ package cz.tul.stin.paveltyl.discount;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+// black-box // matematický výpočet slevy
+// Ověřujeme správný výpočet procent (např. 10 %, 0 %, 100 %).
 class PercentageDiscountTest {
 
     @Test

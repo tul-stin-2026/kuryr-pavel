@@ -12,6 +12,6 @@ public class ExpressDecorator extends ShippingDecorator {
     @Override
     public double calculateCost(double weight) {       // Přepsání výpočtu
         return wrapped.calculateCost(weight)           // Původní cena
-                + EXPRESS_FEE;                          // + expres příplatek
+                + EXPRESS_FEE;                         // + expres příplatek
     }
 }

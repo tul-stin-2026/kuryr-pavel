@@ -3,10 +3,12 @@ package cz.tul.stin.paveltyl.delivery;
 import cz.tul.stin.paveltyl.discount.NoDiscount;
 import cz.tul.stin.paveltyl.discount.PercentageDiscount;
 import cz.tul.stin.paveltyl.shipping.TruckDelivery;
-import org.junit.jupiter.api.Test;
 
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+// black-box (integrační) // kombinace dopravy a slevy
+// Ověřujeme spolupráci více tříd (Delivery + ShippingMethod + DiscountStrategy).
 class DeliveryWithDiscountTest {
 
     @Test

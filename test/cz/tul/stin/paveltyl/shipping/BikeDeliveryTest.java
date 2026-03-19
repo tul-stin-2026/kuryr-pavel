@@ -1,11 +1,12 @@
 package cz.tul.stin.paveltyl.shipping;
 
-// Import statických metod pro asserty.
 import static org.junit.jupiter.api.Assertions.*;
-
-// Import anotace @Test z JUnit 5.
 import org.junit.jupiter.api.Test;
 
+// black-box + white-box (branch coverage)
+// hranice + větvení
+// black-box: ověřujeme pravidlo (≤5 → 80, >5 → výjimka)
+// white-box: pokrýváme obě větve if (weight > 5)
 // Testovací třída pro BikeDelivery.
 class BikeDeliveryTest {
 

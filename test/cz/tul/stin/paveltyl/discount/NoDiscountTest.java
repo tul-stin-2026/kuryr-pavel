@@ -3,6 +3,9 @@ package cz.tul.stin.paveltyl.discount;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
+// black-box
+// identita funkce
+// Testujeme, že sleva nic nemění (výstup = vstup).
 class NoDiscountTest {
 
     @Test

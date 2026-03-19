@@ -1,11 +1,10 @@
 package cz.tul.stin.paveltyl.shipping;
 
-// Import anotace pro testy.
 import org.junit.jupiter.api.Test;
-
-// Import assertů z JUnitu.
 import static org.junit.jupiter.api.Assertions.*;
 
+// black-box // výpočet podle specifikace
+// Stejný princip jako u TruckDelivery, jen jiný vzorec (300 + 25 * weight).
 // Testovací třída pro AirDelivery.
 class AirDeliveryTest {
 

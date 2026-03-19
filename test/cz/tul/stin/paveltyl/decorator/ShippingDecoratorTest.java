@@ -4,10 +4,17 @@ import cz.tul.stin.paveltyl.shipping.ExpressDecorator;
 import cz.tul.stin.paveltyl.shipping.InsuranceDecorator;
 import cz.tul.stin.paveltyl.shipping.ShippingMethod;
 import cz.tul.stin.paveltyl.shipping.TruckDelivery;
-import org.junit.jupiter.api.Test;
 
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+// black-box (částečně integrační) // skládání chování + pořadí
+/*
+Testujeme:
+- jednotlivé dekorátory
+- jejich kombinaci
+- vliv pořadí (klíčový koncept)
+ */
 // Testy ověřují chování dekorátorů nad ShippingMethod,
 // včetně jejich kombinace a vlivu pořadí aplikace.
 public class ShippingDecoratorTest {

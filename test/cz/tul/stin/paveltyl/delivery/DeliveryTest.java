@@ -5,12 +5,12 @@ import cz.tul.stin.paveltyl.shipping.AirDelivery;
 import cz.tul.stin.paveltyl.shipping.BikeDelivery;
 import cz.tul.stin.paveltyl.shipping.TruckDelivery;
 
-// Import anotace @Test.
 import org.junit.jupiter.api.Test;
-
-// Import assertů.
 import static org.junit.jupiter.api.Assertions.*;
 
+// black-box (integrační)
+// delegace na ShippingMethod
+// Testujeme, že Delivery správně deleguje výpočet na zvolenou implementaci dopravy.
 // Testovací třída pro hlavní doménovou třídu Delivery.
 class DeliveryTest {
 
