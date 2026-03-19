@@ -58,4 +58,16 @@ class DeliveryTest {
         // Ověření, že calculatePrice() skutečně vyhodí výjimku.
         assertThrows(IllegalArgumentException.class, d::calculatePrice);
     }
+
+    // Test ověřuje, že váha musí být kladné číslo.
+    @Test
+    void shouldThrowExceptionForNegativeWeight() {
+        assertThrows(IllegalArgumentException.class,
+                () -> new Delivery(
+                        "CZ999",
+                        -5,
+                        new TruckDelivery(),
+                        new NoDiscount()
+                ));
+    }
 }

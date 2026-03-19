@@ -3,8 +3,10 @@ package cz.tul.stin.paveltyl.shipping;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-// black-box // výpočet podle specifikace
-// Stejný princip jako u TruckDelivery, jen jiný vzorec (300 + 25 * weight).
+// black-box
+// výpočet podle specifikace
+// Stejný princip jako u TruckDelivery
+// Testujeme vzorec 300 + 25 * weight pouze na základě zadání, bez znalosti implementace.
 // Testovací třída pro AirDelivery.
 class AirDeliveryTest {
 

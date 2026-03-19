@@ -15,6 +15,10 @@ public class Delivery {
                     double weight,
                     ShippingMethod shippingMethod,
                     DiscountStrategy discountStrategy) {
+        // ošetření, že váha musí být kladné číslo
+        if (weight < 0) {
+            throw new IllegalArgumentException("Váha musí být kladná!");
+        }
 
         this.trackingNumber = trackingNumber;
         this.weight = weight;

@@ -3,7 +3,11 @@ package cz.tul.stin.paveltyl;
 import cz.tul.stin.paveltyl.delivery.Delivery;
 import cz.tul.stin.paveltyl.discount.NoDiscount;
 import cz.tul.stin.paveltyl.discount.PercentageDiscount;
+import cz.tul.stin.paveltyl.service.OrderService;
 import cz.tul.stin.paveltyl.shipping.*;
+
+import java.time.Clock;
+import java.time.ZoneId;
 
 // Testovací třída
 public class Main {
@@ -47,5 +51,34 @@ public class Main {
         System.out.println("Bike (" + d2.getTrackingNumber() + ", " + d2.getWeight() + " kg ): " + d2.calculatePrice());
         System.out.println("Air (" + d3.getTrackingNumber() + ", " + d3.getWeight() + " kg ): " + d3.calculatePrice());
         System.out.println("Truck Express s pojištěním (" + d4.getTrackingNumber() + ", " + d4.getWeight() + " kg ): " + d4.calculatePrice()); // Kompletní výpočet
+
+        // Použijeme systémový čas (reálný běh aplikace)
+        Clock clock = Clock.system(ZoneId.systemDefault());
+
+        // Nastavení strategií dopravy
+        ShippingMethod weekdayMethod = new TruckDelivery();
+        ShippingMethod weekendMethod = new AirDelivery();
+
+        // Vytvoření služby s injektovanými závislostmi
+        OrderService service = new OrderService(
+                clock,
+                weekdayMethod,
+                weekendMethod
+        );
+
+        // Vytvoření objednávky
+        double price = service.createOrder(10);
+
+        System.out.println("Finální cena: " + price);
+
+        /*
+        // Pro nerefaktorovanou třídu OrderService
+            // Vytvoření služby
+        OrderService service = new OrderService();
+        // Vytvoření objednávky (např. 10 kg)
+        double price = service.createOrder(10);
+        // Výpis výsledku (už se vypíše i uvnitř služby)
+        System.out.println("Finální cena: " + price);
+        */
     }
 }
